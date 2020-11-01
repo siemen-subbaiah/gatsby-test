@@ -4,25 +4,23 @@ import HeroSection from "../components/reusable/HeroSection"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import InfoBlock from "../components/InfoBlock"
-import DualInfoBlock from "../components/DualInfoBlock"
 
-const IndexPage = ({ data }) => (
+const ContactPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Contact us" />
     <HeroSection
       img={data.img.childImageSharp.fluid}
-      title="I write code"
+      title="Get Amazing Websites"
       subtitle="example.com"
       heroclass="hero-background"
     />
-    <InfoBlock heading="About us" />
-    <DualInfoBlock heading="Our team" />
+    <InfoBlock heading="Contact us" />
   </Layout>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "heromain.png" }) {
+    img: file(relativePath: { eq: "contact.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -32,4 +30,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default ContactPage

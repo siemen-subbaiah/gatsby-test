@@ -6,23 +6,23 @@ import SEO from "../components/seo"
 import InfoBlock from "../components/InfoBlock"
 import DualInfoBlock from "../components/DualInfoBlock"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="About" />
     <HeroSection
       img={data.img.childImageSharp.fluid}
-      title="I write code"
-      subtitle="example.com"
-      heroclass="hero-background"
+      title="About the team"
+      subtitle=""
+      heroclass="about-background"
     />
-    <InfoBlock heading="About us" />
-    <DualInfoBlock heading="Our team" />
+    <DualInfoBlock heading="A message from CEO" />
+    <InfoBlock heading="Our Vision" />
   </Layout>
 )
 
 export const query = graphql`
   {
-    img: file(relativePath: { eq: "heromain.png" }) {
+    img: file(relativePath: { eq: "about.png" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_tracedSVG
@@ -32,4 +32,4 @@ export const query = graphql`
   }
 `
 
-export default IndexPage
+export default AboutPage
