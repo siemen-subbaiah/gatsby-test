@@ -26,7 +26,7 @@ const CourseCart = ({ mycourses }) => {
                   <button
                     data-item-id={edge.node.id}
                     data-item-price={edge.node.price}
-                    data-item-url="https://www.xnxx.com"
+                    data-item-url="https://gatsbycart.netlify.app/services"
                     data-item-description={edge.node.description}
                     data-item-image={edge.node.image.fixed.src}
                     data-item-name={edge.node.title}
