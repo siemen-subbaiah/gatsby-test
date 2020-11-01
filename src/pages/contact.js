@@ -4,6 +4,7 @@ import HeroSection from "../components/reusable/HeroSection"
 import { graphql } from "gatsby"
 import SEO from "../components/seo"
 import InfoBlock from "../components/InfoBlock"
+import Contact from "../components/Contact"
 
 const ContactPage = ({ data }) => (
   <Layout>
@@ -11,10 +12,11 @@ const ContactPage = ({ data }) => (
     <HeroSection
       img={data.img.childImageSharp.fluid}
       title="Get Amazing Websites"
-      subtitle="example.com"
-      heroclass="hero-background"
+      subtitle=""
+      heroclass="about-background"
     />
-    <InfoBlock heading="Contact us" />
+    <InfoBlock heading="How can we help you" />
+    <Contact />
   </Layout>
 )
 
